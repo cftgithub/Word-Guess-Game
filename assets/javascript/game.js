@@ -19,6 +19,11 @@ var losses = 0;
 
 function startGame () {
     wordSelected = wordOptions[Math.floor(Math.random() * wordOptions.length)];
+    // might want to remove the selected element from the wordOptions array
+
+
+    // IF wordOptions.length === 0 array is empty, reload the array
+
     lettersInWord = wordSelected.split("");
     numBlanks = lettersInWord.length;
     correctGuesses = [];
@@ -44,6 +49,10 @@ function startGame () {
     console.log(lettersInWord);
     console.log(numBlanks);
     console.log(correctGuesses);
+
+// Reset our image
+    image = document.getElementById("image");
+    image.src = "assets/images/bruschetta.jpg";
     
 }
 
@@ -73,7 +82,7 @@ document.onkeyup = function() {
             document.getElementById("winCount").innerHTML = wins;
             document.getElementById("image").innerHTML = src="../images/toast.jpg";
             //startGame ();
-            setTimeout(function() {startGame()}, 10);
+            setTimeout(function() {startGame()}, 11);
             return;
         }
 
@@ -92,11 +101,10 @@ document.onkeyup = function() {
                 alert("Better luck next time");
                 losses = losses + 1;
                 document.getElementById("lossCount").innerHTML = losses;
-                function changeImage(){
-                    image = document.getElementById("image");
-                    image.src = "shouting-emoji.png";
-                }
-                startGame ();
+                
+                image = document.getElementById("image");
+                image.src = "assets/images/shouting-emoji.png";
+                setTimeout(function() {startGame()}, 2000);
             }
         }
 

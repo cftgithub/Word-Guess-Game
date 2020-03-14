@@ -16,7 +16,16 @@ h1, h3 {
     background-color: burlywood;
     color: black;
 }
+
+#wrongGuesses {
+    text-transform: uppercase;
+
+}
 #image {
     width: 90%;
     height: 90%;
+}
+
+#guessLeft, #winCount {
+
 }
