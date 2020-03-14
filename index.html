@@ -8,62 +8,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 
 <body>
-    <!-- Page Content -->
     <div class="container">
 
-        <!-- Portfolio Item Heading -->
         <h1 class="my-4">I AM HUNGRY!!!</h1>
-        <h1 class="my-4"><small>Guess what food I'm craving for.<small> </h1>
+        <h1 class="my-4"><small>Guess what's on the menu.<small> </h1>
         
     
-        <!-- Portfolio Item Row -->
+        <!-- Image of food to change during game -->
         <div class="row">
     
             <div class="col-md-8">
                 <img class="img-fluid" src="http://placehold.it/750x500" alt="Image of food">
             </div>
-    
+            
+            <!-- Where game is played -->
             <div class="col-md-4">
-                <button type="button" class="btn btn-success">Start Game</button>
-                <!-- Game goes here -->
+                <h3>Type a letter to start game</h3>
+                <hr>
+                <h3 class="shadow p-3 mb-5 bg-warning rounded d-flex justify-content-center" id="wordGuess">_ _ _ _</h3>
+                <h3 class="d-flex justify-content-center">Letters Guessed: </h3>
+                <br><h3 id="wrongGuesses"> </h3>
 
-                <h3 class="shadow p-3 mb-5 bg-warning rounded d-flex justify-content-center">_ _ _ _ _ _ _ _ _ _</h3>
-                <h3 class="d-flex justify-content-center">Letters Guessed:</h3>
-
-                <h3 class="d-flex justify-content-center">Guesses Remaining: 7</h3>
-                <h3 class="d-flex justify-content-center">Wins: 0</h3>
-                <h3 class="d-flex justify-content-center">Losses: 0</h3>
+                <h3 class="d-flex justify-content-center">Guesses Remaining: <div id="guessLeft"> 7</div></h3>
+                <h3 class="d-flex justify-content-center">Wins: <div id="winCount"> 0 </div></h3>
+                <h3 class="d-flex justify-content-center">Losses: <div id="lossCount"> 0</div></h3>
 
             </div>
         </div>
     
     </div>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    $(document).ready(function();
         
-
-    <script type="text/javascript">
-
-    var food = ["pizza", "b", "c", "d", "e"];
-    
-    document.onkeyup = function() {
-        var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-        console.log(userGuess);
-
-        var computerGuess = food[Math.floor(Math.random()*food.length)];
-        console.log(computerGuess);
-
-        if (userGuess== computerGuess) {
-            // write correct guess in html line 33
-        } else
-        
-    }
-    
-    
-    
-    
-    </script>   
-    
 </body>
 </html>
