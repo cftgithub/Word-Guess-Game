@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- $(document).ready(function(); -->
 
 </head>
 
@@ -22,19 +23,21 @@
         <div class="row">
     
             <div class="col-md-8">
-                <img class="img-fluid" src="http://placehold.it/750x500" alt="Image of food">
+                <img id="image" class="img-fluid" src="assets/images/bruschetta.jpg" alt="Image of food">
             </div>
             
             <!-- Where game is played -->
             <div class="col-md-4">
                 <h3>Type a letter to start game</h3>
                 <hr>
-                <h3 class="shadow p-3 mb-5 bg-warning rounded d-flex justify-content-center" id="wordGuess">_ _ _ _</h3>
+                <h3 class="shadow p-3 mb-5 rounded d-flex justify-content-center" id="wordGuess">_ _ _ _</h3>
                 <h3 class="d-flex justify-content-center">Letters Guessed: </h3>
-                <br><h3 id="wrongGuesses"> </h3>
+                <br><h3 class= "d-flex justify-content-center" id="wrongGuesses"> </h3>
 
                 <h3 class="d-flex justify-content-center">Guesses Remaining: <div id="guessLeft"> 7</div></h3>
+                <br>
                 <h3 class="d-flex justify-content-center">Wins: <div id="winCount"> 0 </div></h3>
+                <br>
                 <h3 class="d-flex justify-content-center">Losses: <div id="lossCount"> 0</div></h3>
 
             </div>
@@ -42,7 +45,6 @@
     
     </div>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
-    $(document).ready(function();
         
 </body>
 </html>

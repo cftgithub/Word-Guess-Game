@@ -1,6 +1,8 @@
 // Arrays and variables for holding data
-var wordOptions = ["pizza", "nachos", "spaghetti", "pancakes", "soup", "lasagna",
-    "burrito", "scone", "sushi", "hamburger", "pudding", "hashbrown", "sausage" 
+var wordOptions = ["pizza", "popcorn", "spaghetti", "pancakes", "soup", "waffle",
+    "burrito", "biscuit", "sushi", "hamburger", "toast", "steaks", "sausage",
+    "salmon", "churros", "quiche", "bruschetta", "cupcake", "kabob",
+    "salad", "sandwich"
 ];
 var wordSelected = "";
 var lettersInWord = [];
@@ -69,6 +71,7 @@ document.onkeyup = function() {
             setTimeout(function() {alert("You WIN!!!")}, 10);
             wins = wins + 1;
             document.getElementById("winCount").innerHTML = wins;
+            document.getElementById("image").innerHTML = src="../images/toast.jpg";
             //startGame ();
             setTimeout(function() {startGame()}, 10);
             return;
@@ -89,6 +92,10 @@ document.onkeyup = function() {
                 alert("Better luck next time");
                 losses = losses + 1;
                 document.getElementById("lossCount").innerHTML = losses;
+                function changeImage(){
+                    image = document.getElementById("image");
+                    image.src = "shouting-emoji.png";
+                }
                 startGame ();
             }
         }
