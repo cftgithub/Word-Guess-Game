@@ -26,6 +26,6 @@ h1, h3 {
     height: 90%;
 }
 
-#guessLeft, #winCount {
-
+#guessLeft, #winCount, #lossCount {
+    margin-left: 15px;
 }
