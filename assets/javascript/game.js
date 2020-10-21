@@ -7,7 +7,7 @@ var wordOptions = ["pizza", "popcorn", "spaghetti", "pancakes", "soup", "waffle"
 var wordSelected = "";
 var lettersInWord = [];
 var numBlanks = 0; //number of blanks needed
-var dashWord = []; // p _ _ _ _ 
+var dashWord = []; // words in dashes p _ _ _ _ 
 var lettersGuessed = [];
 
 // Game counters
@@ -38,7 +38,7 @@ function startGame() {
     guessRemain = 7;
 
     // Print Values
-    document.getElementById("wordGuess").innerHTML = dashWord.join(" ");
+    document.getElementById("wordGuess").innerHTML = dashWord.join(" "); //removes commas when appended
     document.getElementById("guessLeft").innerHTML = guessRemain;
     document.getElementById("winCount").innerHTML = wins;
     document.getElementById("lossCount").innerHTML = losses;
@@ -66,8 +66,8 @@ document.onkeyup = function () {
     console.log(keyCode);
 
     if (keyCode >= 65 && keyCode <= 90) {
-        if (lettersGuessed.includes(userGuess) === false) {
-            lettersGuessed.push(userGuess);
+        if (lettersGuessed.includes(userGuess) === false) { //check if lettersGuessed is in userGuess array
+            lettersGuessed.push(userGuess); //adds letter to userGuess array
             document.getElementById("wrongGuesses").innerHTML = lettersGuessed.join(" ");
             if (lettersInWord.includes(userGuess)) {
                 for (i = 0; i < lettersInWord.length; i++) {
@@ -93,12 +93,12 @@ document.onkeyup = function () {
                     losses = losses + 1;
                     document.getElementById("lossCount").innerHTML = losses;
                     image = document.getElementById("image");
-                    image.src = "assets/images/shouting-emoji.png";
+                    image.src = "assets/images/shouting-emoji2.png";
                     setTimeout(function () { startGame(), resetImage() }, 2000);
                 }
             }
         } else {
-            alert("You already pressed that letter!");
+            alert("You already pressed that letter!");        
         }
     } else {
         alert("Please enter a letter from a-z!");
