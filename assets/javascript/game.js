@@ -40,7 +40,6 @@ function startGame() {
     document.getElementById("winCount").innerHTML = wins;
     document.getElementById("lossCount").innerHTML = losses;
     document.getElementById("wrongGuesses").innerHTML = lettersGuessed;
-
 }
 
 function checkArray() {
