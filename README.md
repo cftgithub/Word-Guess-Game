@@ -1,6 +1,6 @@
 # Word-Guess-Game
 ## Purpose:
-To create a fun game using JavaScript to demonstrate event listeners and DOM manipulation.
+To create a fun game using JavaScript to demonstrate event listeners and DOM manipulation. Try it out yourself! [Play Word Guess Game](https://cftgithub.github.io/Word-Guess-Game/)
 
 ## How the App Works:
 * The following will be displayed on the webpage at the start of game and modified/updated during game-play.
