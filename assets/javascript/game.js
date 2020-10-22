@@ -2,7 +2,7 @@
 var wordOptions = ["pizza", "popcorn", "spaghetti", "pancakes", "soup", "waffle",
     "burrito", "biscuit", "sushi", "hamburger", "toast", "steaks", "sausage",
     "salmon", "churros", "quiche", "bruschetta", "cupcake", "kabob",
-    "salad", "sandwich"
+    "salad", "sandwich", "lasagna", "sundae"
 ];
 var wordSelected = "";
 var lettersInWord = [];
@@ -45,9 +45,9 @@ function startGame() {
 function checkArray() {
     if (wordOptions.length === 0) {
         wordOptions = ["pizza", "popcorn", "spaghetti", "pancakes", "soup", "waffle",
-            "burrito", "biscuit", "sushi", "hamburger", "toast", "steaks", "sausage",
-            "salmon", "churros", "quiche", "bruschetta", "cupcake", "kabob",
-            "salad", "sandwich"]
+        "burrito", "biscuit", "sushi", "hamburger", "toast", "steaks", "sausage",
+        "salmon", "churros", "quiche", "bruschetta", "cupcake", "kabob",
+        "salad", "sandwich", "lasagna", "sundae"]
     }
 }
 
