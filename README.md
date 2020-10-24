@@ -15,7 +15,7 @@ To create a fun game using JavaScript to demonstrate event listeners and DOM man
 * After the player wins/loses, the game will automatically choose another word and reset "Letters Guessed" and "Guesses Remaining" back to 7.
 
 ### Game Design Notes:
-* The word to be guessed will be randomly selected from an array.
+* The word to be guessed will be randomly selected from an array and removed from the array until each word in the array has cycled through. This will ensure the same word will not be selected until the player has cycled through the entire array.
 * "Letters Guessed" will list all letters (correct and incorrect) guessed by the player.
 * Player will be notified if a letter has been guessed or if the guess is not a letter.
 * Each letter guessed correctly will replace the placeholder dash(es).
